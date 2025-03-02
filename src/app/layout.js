@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { Toaster } from 'sonner';
+import NavBar from '@/components/global/NavBar';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -19,10 +20,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang='en'>
+    <html lang='en' suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} min-h-screen`}
       >
+        <NavBar />
         {children}
         <Toaster position='top-center' richColors={true} />
       </body>

@@ -20,7 +20,7 @@ const Search = () => {
   };
 
   return (
-    <div className='w-full h-screen flex flex-col justify-center items-center gap-4 p-4'>
+    <div className='w-full h-[calc(100vh-5rem)] flex flex-col justify-center items-center gap-4 p-4'>
       <ImageSearchForm search={search} handleSearchState={handleSearchState} />
 
       {search.loading && (
