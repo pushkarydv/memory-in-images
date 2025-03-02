@@ -41,6 +41,7 @@ const ImageSearchForm = ({ search, handleSearchState }) => {
           required
           placeholder='Search'
           disabled={search.loading}
+          autoComplete='off'
         />
       </label>
       <button className='btn join-item' type='submit' disabled={search.loading}>
