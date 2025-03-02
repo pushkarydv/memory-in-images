@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+@plugin "daisyui" {
+    themes: cupcake --default;
+}
+
+.input{
+    @apply outline-none;
+}
