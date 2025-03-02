@@ -78,6 +78,9 @@ const ImagesCarousel = ({ images }) => {
             className='object-contain max-h-full max-w-full'
             alt={`Image ${index + 1}`}
           />
+          <div className='absolute left-4 bottom-4 bg-white/80 p-2 text-sm rounded-full border-2 border-white'>
+            {image.match}% Match
+          </div>
           <div className='dropdown dropdown-top dropdown-end absolute right-4 bottom-4'>
             <div
               tabIndex={0}
