@@ -3,9 +3,10 @@
 import React from 'react';
 import { View } from 'lucide-react';
 import { toast } from 'sonner';
+import axios from 'axios';
 
 const ImageSearchForm = ({ search, handleSearchState }) => {
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
     handleSearchState('loading', true);
     try {
@@ -16,7 +17,15 @@ const ImageSearchForm = ({ search, handleSearchState }) => {
         toast.error('Please provide search query');
         return;
       }
+
+      const res = await axios.post('/api/search', { query });
+      const results = res.data.results;
+      if (results.length > 0) {
+        handleSearchState('images', results);
+      }
+      
     } catch (err) {
+      toast.error('Something went wrong');
     } finally {
       handleSearchState('loading', false);
     }
