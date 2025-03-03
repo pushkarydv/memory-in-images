@@ -119,6 +119,17 @@ bun dev
 4. **Natural Language Search**: User queries are converted to vectors using `text-embedding-3-small`.
 5. **Vector Matching**: The system finds relevant images based on vector similarity.
 6. **Image Display**: Matched images are displayed with their similarity scores.
+
+
+<details>
+<summary><h2>Screenshots</h2></summary>
+
+<img width="1280" alt="Screenshot 2025-03-03 at 7 01 45 AM" src="https://github.com/user-attachments/assets/77eda0ce-b532-426d-a70a-223a5ec4d9bd" />
+<img width="1280" alt="Screenshot 2025-03-03 at 7 00 54 AM" src="https://github.com/user-attachments/assets/1a5ab261-e714-4dcc-b83c-9faac5a28d11" />
+<img width="1280" alt="Screenshot 2025-03-03 at 7 00 24 AM" src="https://github.com/user-attachments/assets/dd0f9318-b7b8-47b2-a53d-958b5b9979ec" />
+</details>
+
+
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
