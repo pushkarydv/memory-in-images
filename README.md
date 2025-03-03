@@ -4,6 +4,14 @@ Search within your images using natural language. This application allows you to
 
 ![Memory in Images](https://memory-in-images.vercel.app/banner.jpg)
 
+## Why this?
+
+The usual image search available has a limitation—you can't search for a specific moment you remember from thousands of images. However, with this approach, it becomes possible to search even for small details. Here are a few examples of queries you can make:
+
+- Hiking on a mountain with cows on the path
+- When I was fat
+- Visiting a haunted place
+
 ## Features
 
 - 🖼️ Upload and store images using Cloudinary
@@ -79,6 +87,28 @@ Control whether uploads are enabled:
 NEXT_PUBLIC_UPLOAD_DISABLED=false
 ```
 
+## How It Works
+
+1. **Image Upload**: Images are uploaded to Cloudinary for storage.
+2. **Image Analysis**: Each image is analyzed using LLaMA 3.2 Vision, generating descriptive text and vector embeddings via OpenAI.
+3. **Vector Storage**: Embeddings are stored in the Upstash Vector Database.
+4. **Natural Language Search**: User queries are converted to vectors using `text-embedding-3-small`.
+5. **Vector Matching**: The system finds relevant images based on vector similarity.
+6. **Image Display**: Matched images are displayed with their similarity scores.
+
+![image](https://github.com/user-attachments/assets/7da8120a-37d1-41b5-a879-5de5b3d1f102)
+![image](https://github.com/user-attachments/assets/73a54251-6fd9-4c24-91b6-745fe62aab9f)
+
+
+
+<details>
+<summary><h2>Screenshots</h2></summary>
+
+<img width="1280" alt="Screenshot 2025-03-03 at 7 01 45 AM" src="https://github.com/user-attachments/assets/77eda0ce-b532-426d-a70a-223a5ec4d9bd" />
+<img width="1280" alt="Screenshot 2025-03-03 at 7 00 54 AM" src="https://github.com/user-attachments/assets/1a5ab261-e714-4dcc-b83c-9faac5a28d11" />
+<img width="1280" alt="Screenshot 2025-03-03 at 7 00 24 AM" src="https://github.com/user-attachments/assets/dd0f9318-b7b8-47b2-a53d-958b5b9979ec" />
+</details>
+
 ## Local Development
 
 1. Clone the repository
@@ -110,24 +140,6 @@ bun dev
 ```
 
 5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result
-
-## How It Works
-
-1. **Image Upload**: Images are uploaded to Cloudinary for storage.
-2. **Image Analysis**: Each image is analyzed using LLaMA 3.2 Vision, generating descriptive text and vector embeddings via OpenAI.
-3. **Vector Storage**: Embeddings are stored in the Upstash Vector Database.
-4. **Natural Language Search**: User queries are converted to vectors using `text-embedding-3-small`.
-5. **Vector Matching**: The system finds relevant images based on vector similarity.
-6. **Image Display**: Matched images are displayed with their similarity scores.
-
-
-<details>
-<summary><h2>Screenshots</h2></summary>
-
-<img width="1280" alt="Screenshot 2025-03-03 at 7 01 45 AM" src="https://github.com/user-attachments/assets/77eda0ce-b532-426d-a70a-223a5ec4d9bd" />
-<img width="1280" alt="Screenshot 2025-03-03 at 7 00 54 AM" src="https://github.com/user-attachments/assets/1a5ab261-e714-4dcc-b83c-9faac5a28d11" />
-<img width="1280" alt="Screenshot 2025-03-03 at 7 00 24 AM" src="https://github.com/user-attachments/assets/dd0f9318-b7b8-47b2-a53d-958b5b9979ec" />
-</details>
 
 
 ## Contributing
