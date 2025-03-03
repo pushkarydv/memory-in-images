@@ -8,7 +8,16 @@ import React from 'react';
 const Deploy = () => {
   return (
     <div className='p-4 max-w-4xl mx-auto'>
-      <h1 className='text-2xl font-bold mb-4'>Deploy at your own</h1>
+      <h1 className='text-2xl font-bold mb-4 flex items-center justify-between flex-wrap'>
+        <span>Deploy at your own</span>
+        <a href='https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fpushkarydv%2Fmemory-in-images&env=CLOUDINARY_CLOUD_NAME,CLOUDINARY_API_KEY,CLOUDINARY_API_SECRET,NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,GROQ_API_KEY,OPENAI_API_KEY,UPSTASH_URL,UPSTASH_TOKEN,NEXT_PUBLIC_UPLOAD_DISABLED&envDescription=Please%20visit%20memory-in-images.vercel.app%2Fdeploy%20to%20know%20how%20to%20get%20and%20set%20these%20up&envLink=https%3A%2F%2Fmemory-in-images.vercel.app%2Fdeploy&project-name=memory-in-images&repository-name=memory-in-images&demo-title=Memory%20In%20Images&demo-description=Search%20within%20your%20images%20using%20natural%20language.&demo-url=https%3A%2F%2Fmemory-in-images.vercel.app&demo-image=https%3A%2F%2Fmemory-in-images.vercel.app%2Fbanner.jpg'>
+          <img
+            src='https://vercel.com/button'
+            className='my-4'
+            alt='Deploy with Vercel'
+          />
+        </a>
+      </h1>
 
       <p className='mb-4'>
         There are certain variables you need to create to deploy this
